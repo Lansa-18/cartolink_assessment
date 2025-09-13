@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import {
   Home,
@@ -11,7 +10,6 @@ import {
   Type,
   Folder,
   Bell,
-  Sun,
   Images,
   Headset,
 } from "lucide-react";
@@ -19,6 +17,7 @@ import { usePathname } from "next/navigation";
 import SupportIcon from "./SupportIcons";
 import Button from "./Button";
 import { ThemeToggle } from "./ThemeToggle";
+import Logo from "./Logo";
 
 export default function Navigation() {
   const pathName = usePathname();
@@ -35,26 +34,15 @@ export default function Navigation() {
 
   return (
     <nav className="">
-      <div className="mx-auto px-6 py-2">
+      <div className="mx-auto px-6.5 py-3">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <article className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src="/next.svg"
-                alt="Logo"
-                width={28}
-                height={28}
-                className="dark:invert fill-black"
-              />
-              <span className="font-semibold text-lg text-gray-900 dark:text-white">
-                CartoLinks
-              </span>
-            </Link>
+            <Logo />
           </article>
 
           {/* Navigation Icons */}
-          <article className="flex items-center gap-3.5 py-2 px-4 rounded-xl bg-secondary-grey">
+          <article className="flex items-center gap-3.5 py-2 px-4 rounded-xl bg-primary-grey">
             {navItems.map((item) => {
               const IconComponent = item.icon;
               return (
@@ -85,8 +73,8 @@ export default function Navigation() {
             <ThemeToggle />
 
             {/* User Avatar */}
-            <button className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center hover:shadow-md transition-shadow duration-200">
-              <span className="text-sm font-medium text-white">U</span>
+            <button className="w-8 h-8 rounded-full bg-gradient-to-b from-pink-400 to-blue-400 flex items-center justify-center hover:shadow-md transition-shadow duration-200">
+              <span className="text-sm font-medium text-white"></span>
             </button>
           </article>
         </div>
