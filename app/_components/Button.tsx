@@ -7,8 +7,8 @@ interface ButtonProps {
 
 export default function Button({icon: Icon}: ButtonProps) {
   return (
-    <button className="relative p-2.5 rounded-full cursor-pointer bg-secondary-grey hover:bg-gray-100 transition-colors duration-200">
-        {<Icon size={16}/>}
+    <button className="relative p-2.5 rounded-full cursor-pointer bg-primary-grey hover:bg-gray-100 dark:hover:text-black transition-all duration-300">
+        {<Icon className="fill-black dark:fill-white " size={16}/>}
     </button>
   );
 }

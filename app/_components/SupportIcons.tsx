@@ -11,7 +11,7 @@ export default function SupportIcon({text, icon: Icon, href}: SupportIconProps) 
   return (
     <Link
       href={href}
-      className="flex items-center gap-2 text-gray-600 bg-primary-grey py-2 px-2 rounded-lg hover:text-gray-900 transition-colors duration-200"
+      className="flex items-center gap-2 text-gray-600 dark:text-white bg-primary-grey py-2 px-2 rounded-lg hover:text-gray-900 transition-colors duration-200"
     >
       <Icon size={16} />
       <span className="text-sm font-medium">{text}</span>

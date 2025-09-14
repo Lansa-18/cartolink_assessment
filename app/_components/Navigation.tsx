@@ -1,29 +1,22 @@
 "use client";
 
-import Link from "next/link";
-import {GoHomeFill} from 'react-icons/go'
-import {FaRegImage, FaFolder} from 'react-icons/fa6'
-import {IoVideocam, IoLogoFigma} from 'react-icons/io5'
-import {PiMarkerCircleFill} from 'react-icons/pi'
-import {HiMiniPaintBrush} from 'react-icons/hi2'
-import {GiFountainPen} from 'react-icons/gi'
 import {
-  Home,
-  Monitor,
-  Video,
-  Edit3,
-  Check,
-  Type,
-  Folder,
   Bell,
-  Images,
   Headset,
+  Images
 } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import SupportIcon from "./SupportIcons";
+import { FaFolder, FaRegImage } from 'react-icons/fa6';
+import { GiFountainPen } from 'react-icons/gi';
+import { GoHomeFill } from 'react-icons/go';
+import { HiMiniPaintBrush } from 'react-icons/hi2';
+import { IoVideocam } from 'react-icons/io5';
+import { PiMarkerCircleFill } from 'react-icons/pi';
 import Button from "./Button";
-import { ThemeToggle } from "./ThemeToggle";
 import Logo from "./Logo";
+import SupportIcon from "./SupportIcons";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navigation() {
   const pathName = usePathname();
@@ -39,7 +32,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="">
+    <nav className="bg-white dark:bg-black">
       <div className="mx-auto px-6 py-3">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -55,7 +48,7 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`p-3 rounded-lg ${pathName === item.href ? "bg-white shadow-sm" : "bg-none"} hover:bg-white hover:shadow-sm transition-all duration-300`}
+                  className={`p-3 rounded-lg ${pathName === item.href ? "bg-white dark:bg-black shadow-sm" : "bg-none"} hover:bg-white dark:hover:bg-black hover:shadow-sm transition-all duration-300`}
                   title={item.label}
                 >
                   <IconComponent size={20} className="" />
