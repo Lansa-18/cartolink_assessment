@@ -1,6 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import {GoHomeFill} from 'react-icons/go'
+import {FaRegImage, FaFolder} from 'react-icons/fa6'
+import {IoVideocam, IoLogoFigma} from 'react-icons/io5'
+import {PiMarkerCircleFill} from 'react-icons/pi'
+import {HiMiniPaintBrush} from 'react-icons/hi2'
+import {GiFountainPen} from 'react-icons/gi'
 import {
   Home,
   Monitor,
@@ -23,18 +29,18 @@ export default function Navigation() {
   const pathName = usePathname();
 
   const navItems = [
-    { href: "/", icon: Home, label: "Home" },
-    { href: "/desktop", icon: Monitor, label: "Desktop" },
-    { href: "/video", icon: Video, label: "Video" },
-    { href: "/edit", icon: Edit3, label: "Edit" },
-    { href: "/check", icon: Check, label: "Check" },
-    { href: "/text", icon: Type, label: "Text" },
-    { href: "/files", icon: Folder, label: "Files" },
+    { href: "/", icon: GoHomeFill, label: "Home" },
+    { href: "/desktop", icon: FaRegImage, label: "Desktop" },
+    { href: "/video", icon: IoVideocam, label: "Video" },
+    { href: "/edit", icon: GiFountainPen, label: "Edit" },
+    { href: "/check", icon: HiMiniPaintBrush, label: "Check" },
+    { href: "/text", icon: PiMarkerCircleFill, label: "Text" },
+    { href: "/files", icon: FaFolder, label: "Files" },
   ];
 
   return (
     <nav className="">
-      <div className="mx-auto px-6.5 py-3">
+      <div className="mx-auto px-6 py-3">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <article className="flex items-center">
