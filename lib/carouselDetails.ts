@@ -1,4 +1,6 @@
-export const carouselDetails = [
+import { carouselDetails as CarouselDetailsType } from "./types";
+
+export const carouselDetails: CarouselDetailsType[] = [
   {
     id: 1,
     imgSrc: "/img1.png",

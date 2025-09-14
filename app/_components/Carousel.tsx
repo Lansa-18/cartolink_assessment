@@ -9,7 +9,7 @@ export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Calculate scroll amount (one card width + gap)
-  const scrollAmount = 896; // 440px card width + 16px gap
+  const scrollAmount = 896; // 880 card width + 16px gap
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -40,7 +40,7 @@ export default function Carousel() {
           {carouselDetails.map((card) => (
             <div
               key={card.id}
-              className="flex-shrink-0" // Fixed width for cards
+              className="flex-shrink-0" 
             >
               <CarouselCard
                 imgSrc={card.imgSrc}
@@ -76,16 +76,22 @@ export default function Carousel() {
         <div className="absolute right-0 flex gap-2">
           <button
             onClick={prevSlide}
-            className="z-30 p-1.5 bg-[#dadada] dark:bg-white backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-200"
+            className="z-30 p-1.5 bg-[#dadada] dark:bg-white backdrop-blur-sm rounded-full group hover:bg-black transition-colors duration-200"
           >
-            <ChevronLeft size={12} className="text-black font-bold" />
+            <ChevronLeft
+              size={12}
+              className="text-black group-hover:text-white font-bold dark:group-hover:text-black"
+            />
           </button>
 
           <button
             onClick={nextSlide}
-            className="z-30 p-1.5 bg-[#dadada] dark:bg-white backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-200"
+            className="z-30 p-1.5 bg-[#dadada] dark:bg-white backdrop-blur-sm rounded-full group hover:bg-black hover:text-white transition-colors duration-200"
           >
-            <ChevronRight size={12} className="text-black font-bold" />
+            <ChevronRight
+              size={12}
+              className="text-black group-hover:text-white dark:group-hover:text-black font-bold"
+            />
           </button>
         </div>
       </div>

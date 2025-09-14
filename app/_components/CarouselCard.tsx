@@ -1,13 +1,5 @@
+import { CarouselCardProps } from "@/lib/types";
 import Image from "next/image";
-
-interface CarouselCardProps {
-  imgSrc: string;
-  modelText: string;
-  centerText: string;
-  bottomHeaderText: string;
-  bottomParagraph: string;
-  btnText: string;
-}
 
 export default function CarouselCard({
   imgSrc,
@@ -19,8 +11,6 @@ export default function CarouselCard({
 }: CarouselCardProps) {
   return (
     <div className="relative w-[55rem] h-[30rem] rounded-2xl overflow-hidden shadow-2xl">
-      {/* Background Images */}
-
       <Image src={imgSrc} alt="carousel-img" fill className="object-cover" />
 
       <div className="absolute top-4 left-4 z-20">
@@ -48,9 +38,8 @@ export default function CarouselCard({
           </p>
         </div>
 
-        {/* CTA Button */}
         <div className="absolute bottom-8 right-8">
-          <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors duration-200 shadow-lg">
+          <button className="bg-white text-gray-900 px-6 py-3 cursor-pointer rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors duration-200 shadow-lg">
             {btnText}
           </button>
         </div>
