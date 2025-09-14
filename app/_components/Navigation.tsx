@@ -68,10 +68,9 @@ export default function Navigation() {
             {/* Notification Bell */}
             <Button icon={Bell} />
 
-            {/* Star/Favorites */}
+            {/* Dark / Light Mode */}
             <ThemeToggle />
 
-            {/* User Avatar */}
             <button className="w-8 h-8 rounded-full bg-gradient-to-b from-pink-400 to-blue-400 flex items-center justify-center hover:shadow-md transition-shadow duration-200">
               <span className="text-sm font-medium text-white"></span>
             </button>

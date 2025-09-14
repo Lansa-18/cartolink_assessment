@@ -7,7 +7,7 @@ interface GenerateCardProps {
 
 export default function GenerateCard({generateItems}: GenerateCardProps) {
   return (
-    <div className="py-16 px-6 mx-auto">
+    <section className="py-16 px-6 mx-auto">
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl font-semibold text-black dark:text-white">
           Generate
@@ -60,5 +60,5 @@ export default function GenerateCard({generateItems}: GenerateCardProps) {
           </div>
         ))}
       </div>
-    </div>  )
+    </section>  )
 }
