@@ -32,8 +32,8 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-white dark:bg-black">
-      <div className="mx-auto px-6 py-3">
+    <nav className="bg-white dark:bg-black px-6 py-3">
+      <div className="mx-auto">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <article className="flex items-center">

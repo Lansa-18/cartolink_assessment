@@ -28,9 +28,9 @@ export default function Carousel() {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="w-full">
       {/* Carousel Container */}
-      <div className="relative overflow-hidden">
+      <div className="overflow-hidden">
         <div
           className="flex gap-4 transition-transform duration-500 ease-in-out"
           style={{
@@ -76,22 +76,16 @@ export default function Carousel() {
         <div className="absolute right-0 flex gap-2">
           <button
             onClick={prevSlide}
-            className="z-30 p-1.5 bg-[#dadada] backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-200"
+            className="z-30 p-1.5 bg-[#dadada] dark:bg-white backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-200"
           >
-            <ChevronLeft
-              size={12}
-              className="text-black dark:text-white font-bold"
-            />
+            <ChevronLeft size={12} className="text-black font-bold" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="z-30 p-1.5 bg-[#dadada] backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-200"
+            className="z-30 p-1.5 bg-[#dadada] dark:bg-white backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-200"
           >
-            <ChevronRight
-              size={12}
-              className="text-black dark:text-white font-bold"
-            />
+            <ChevronRight size={12} className="text-black font-bold" />
           </button>
         </div>
       </div>
