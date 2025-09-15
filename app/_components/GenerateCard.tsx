@@ -18,8 +18,7 @@ export default function GenerateCard({generateItems}: GenerateCardProps) {
         </button>
       </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-7.5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7.5">
         {generateItems.map((item) => (
           <div
             key={item.id}
@@ -36,8 +35,8 @@ export default function GenerateCard({generateItems}: GenerateCardProps) {
 
                 {/* Title and Description */}
                 <div className="">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="text-base font-semibold text-black dark:text-white">
+                  <div className="flex items-center gap-4 lg:gap-2 md:gap-1 md:border-red-500 mb-1">
+                    <h3 className="text-base font-semibold text-black dark:text-white md:leading-[1.20] md:text-sm">
                       {item.title}
                     </h3>
                     {item.isNew && (
@@ -53,7 +52,7 @@ export default function GenerateCard({generateItems}: GenerateCardProps) {
               </div>
 
               {/* Right side - Open Button */}
-              <button className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-black dark:text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm ml-4 flex-shrink-0">
+              <button className="bg-gray-100 self-start hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-black dark:text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm ml-4 flex-shrink-0">
                 Open
               </button>
             </div>

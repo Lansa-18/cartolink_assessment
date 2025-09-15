@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant custom-900 (min-width: 900px);
 
 @theme inline {
   --color-background: var(--background);
@@ -46,6 +47,10 @@
   --color-primary-grey: var(--primary-grey);
   --color-secondary-grey: var(--secondary-grey);
   --color-tertiary-grey: var(--tertiary-grey);
+
+  /* Custom Breakpoints */
+  --breakpoint-xs: 475px;
+  --breakpoint-custom-900: var(--custom-900);
 }
 
 :root {
@@ -86,6 +91,8 @@
   --primary-grey: #f6f6f6;
   --secondary-grey: #f8f8f8;
   --tertiary-grey: #f9f9f9;
+
+  --custom-900: 56.25rem;
 }
 
 .dark {

@@ -13,18 +13,18 @@ export default function Home() {
           <GenerateSection />
 
           <section className="flex items-center justify-between mb-2 px-6 ">
-            <h3 className="text-2xl font-bold text-black dark:text-white">
+            <h3 className="sm:text-2xl text-xl font-bold text-black dark:text-white">
               Gallery
             </h3>
 
             <div className="flex gap-2">
               <button className="bg-primary-grey relative flex font-semibold cursor-pointer items-center gap-1.5 rounded-full p-2.5 transition-all duration-300 hover:bg-gray-100 dark:hover:text-black">
                 <FaWallet />
-                <span>Legal</span>
+                <span className="text-base sm:text-xl">Legal</span>
               </button>
               <button className="bg-primary-grey relative flex font-semibold cursor-pointer items-center gap-1.5 rounded-full p-2.5 transition-all duration-300 hover:bg-gray-100 dark:hover:text-black">
                 <FaBook />
-                <span>Pricing</span>
+                <span className="text-base sm:text-xl">Pricing</span>
               </button>
             </div>
           </section>
